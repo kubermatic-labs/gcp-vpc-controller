@@ -1,0 +1,6 @@
+apiVersion: vpc-network.gcp.k8c-labs.io/v1alpha1
+kind: VPCNetwork
+metadata:
+  name: vpcnetwork-sample
+spec:
+  # TODO(user): Add fields here

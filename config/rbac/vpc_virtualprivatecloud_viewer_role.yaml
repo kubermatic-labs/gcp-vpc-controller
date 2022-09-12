@@ -1,0 +1,20 @@
+# permissions for end users to view virtualprivateclouds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: virtualprivatecloud-viewer-role
+rules:
+- apiGroups:
+  - vpc.gcp.k8c-labs.io
+  resources:
+  - virtualprivateclouds
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - vpc.gcp.k8c-labs.io
+  resources:
+  - virtualprivateclouds/status
+  verbs:
+  - get

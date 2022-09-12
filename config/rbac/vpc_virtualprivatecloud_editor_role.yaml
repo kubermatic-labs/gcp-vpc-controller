@@ -1,0 +1,24 @@
+# permissions for end users to edit virtualprivateclouds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: virtualprivatecloud-editor-role
+rules:
+- apiGroups:
+  - vpc.gcp.k8c-labs.io
+  resources:
+  - virtualprivateclouds
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - vpc.gcp.k8c-labs.io
+  resources:
+  - virtualprivateclouds/status
+  verbs:
+  - get

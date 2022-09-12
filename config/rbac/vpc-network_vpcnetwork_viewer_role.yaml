@@ -1,0 +1,20 @@
+# permissions for end users to view vpcnetworks.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: vpcnetwork-viewer-role
+rules:
+- apiGroups:
+  - vpc-network.gcp.k8c-labs.io
+  resources:
+  - vpcnetworks
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - vpc-network.gcp.k8c-labs.io
+  resources:
+  - vpcnetworks/status
+  verbs:
+  - get

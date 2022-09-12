@@ -1,0 +1,6 @@
+apiVersion: vpc.gcp.k8c-labs.io/v1alpha1
+kind: VirtualPrivateCloud
+metadata:
+  name: virtualprivatecloud-sample
+spec:
+  # TODO(user): Add fields here

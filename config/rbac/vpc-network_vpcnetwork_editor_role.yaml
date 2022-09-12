@@ -1,0 +1,24 @@
+# permissions for end users to edit vpcnetworks.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: vpcnetwork-editor-role
+rules:
+- apiGroups:
+  - vpc-network.gcp.k8c-labs.io
+  resources:
+  - vpcnetworks
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - vpc-network.gcp.k8c-labs.io
+  resources:
+  - vpcnetworks/status
+  verbs:
+  - get

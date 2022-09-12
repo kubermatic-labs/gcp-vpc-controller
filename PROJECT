@@ -1,0 +1,26 @@
+domain: gcp.k8c-labs.io
+layout:
+- go.kubebuilder.io/v3
+multigroup: true
+projectName: gcp-vpc-controller
+repo: github.com/kubermatic-labs/gcp-vpc-controller
+resources:
+- api:
+    crdVersion: v1
+    namespaced: false
+  controller: true
+  domain: gcp.k8c-labs.io
+  group: vpc-network
+  kind: VPCNetwork
+  path: github.com/kubermatic-labs/gcp-vpc-controller/apis/vpc-network/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: false
+  controller: true
+  domain: gcp.k8c-labs.io
+  group: subnet
+  kind: Subnet
+  path: github.com/kubermatic-labs/gcp-vpc-controller/apis/subnet/v1alpha1
+  version: v1alpha1
+version: "3"
